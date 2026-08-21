@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""渲染 morning.html：包豪斯风 + 笑脸图标 + 四栏。
-AI/菌群/德新 来自 build.py 抓取的 RSS JSON；
-德语A2/耶拿 来自浏览器抓取的注入 JSON(data/de_a2.json, data/jena.json)，
-若为空则显示'今日待刷新'提示，绝不编造。
+"""渲染 morning.html —— 视觉 1:1 复刻本地 preview.html 的包豪斯风，
+数据来自 build.py 抓取的 RSS JSON (data/*.json)。
+日期 = 运行时真实日期 (动态, 不再写死) —— 修复'刷新日期变但内容不变'。
+德语A2 / 耶拿 无注入 JSON 时显示'待刷新', 绝不编造。
 """
-import json, pathlib, datetime, html
+import json, pathlib, datetime, html, os
 
 ROOT = pathlib.Path(__file__).resolve().parent
 DATA = ROOT / "data"
@@ -16,69 +16,70 @@ def load(key):
         except Exception: return []
     return []
 
-def esc(s): return html.escape(str(s))
-
 AI = load("ai"); GUT = load("gut"); DENEWS = load("de_news")
 DEA2 = load("de_a2"); JENA = load("jena")
 
-def ai_card(x):
-    return f'''<article class="card">
-  <a class="title" href="{esc(x['url'])}" target="_blank" rel="noopener">{esc(x['title'])}</a>
-  <div class="meta"><span class="tag tag-web">{esc(x.get('source',''))}</span></div>
-  {('<p class="desc">'+esc(x['desc'])+'</p>') if x.get('desc') else ''}
-</article>'''
+def esc(s): return html.escape(str(s))
 
-def gut_card(x):
-    return f'''<article class="card">
-  <a class="title" href="{esc(x['url'])}" target="_blank" rel="noopener">{esc(x['title'])}</a>
-  <div class="meta"><span class="tag tag-topic">{esc(x.get('source','Nature'))}</span></div>
-  {('<p class="desc">'+esc(x['desc'])+'</p>') if x.get('desc') else ''}
-</article>'''
+def art_class(a):
+    return {"der":"art-der","die":"art-die","das":"art-das"}.get(a,"")
 
-def news_card(x):
-    return f'''<article class="card">
-  <a class="title" href="{esc(x['url'])}" target="_blank" rel="noopener">{esc(x['title'])}</a>
-  <div class="meta"><span class="tag tag-web">{esc(x.get('source',''))}</span></div>
-  {('<p class="desc">'+esc(x['desc'])+'</p>') if x.get('desc') else ''}
-</article>'''
-
-def placeholder(msg):
-    return f'<article class="card placeholder"><p>{esc(msg)}</p></article>'
-
-def dea2_block():
+# ---------- 德语 A2 卡片 (注入 JSON 格式: {ger,zh,words:[{art,w,pl,zh,note}],grammar:[...],en}) ----------
+def de_cards():
     if not DEA2:
-        return placeholder("德语 A2 今日待刷新 —— 用浏览器抓取 nachrichtenleicht / tagesschau 简易德语后注入。在 Hermes 中说一声\"刷新德语\"即可。")
-    parts = []
+        return '<div class="card de"><div class="ger">德语 A2 今日待刷新</div><div class="zh">在 Hermes 中说一声「刷新德语」，我用浏览器抓取 nachrichtenleicht / tagesschau 真实简易德语并注入。绝不编造内容。</div></div>'
+    out = []
     for s in DEA2:
-        rows = "".join(
-            f"<tr><td>{esc(w['w'])}</td><td>{esc(w.get('note',''))}</td><td>{esc(w.get('zh',''))}</td></tr>"
-            for w in s.get("words", []))
-        gram = "".join(f"<li>{esc(g)}</li>" for g in s.get("grammar", []))
-        parts.append(f'''<article class="card de">
-  <p class="ger">{esc(s.get('ger',''))}</p>
-  <p class="zh">{esc(s.get('zh_full',''))}</p>
-  <div class="blk-t">逐词解析 · WORTSCHATZ</div>
-  <table class="vocab"><tr><th>词条</th><th>解析（词性/格/时态）</th><th>中文</th></tr>{rows}</table>
-  <div class="blk-t">语法详解 · GRAMMATIK</div>
-  <ul class="gram">{gram}</ul>
-</article>''')
-    return "\n".join(parts)
+        rows = ""
+        for w in s.get("words", []):
+            art = ('<b class="' + art_class(w.get('art','')) + '">' + esc(w['art']) + '</b> ') if w.get('art') else ''
+            pl = (' <span class="pl">' + esc(w['pl']) + '</span>') if w.get('pl') else ''
+            rows += "<tr><td>" + art + esc(w['w']) + pl + "</td><td>" + esc(w.get('note','')) + "</td><td>" + esc(w.get('zh','')) + "</td></tr>"
+        g = "".join("<li>" + esc(x) + "</li>" for x in s.get("grammar", []))
+        en = s.get("en","")
+        card = '<div class="card de">' \
+          '<div class="ger">' + esc(s.get('ger','')) + '</div>' \
+          '<div class="zh">' + esc(s.get('zh_full','')) + '</div>' \
+          '<div class="blk-t">逐词解析 · Wortschatz</div>' \
+          '<table class="vocab"><tr><th>词条</th><th>解析（词性/格/时态）</th><th>中文</th></tr>' + rows + '</table>' \
+          '<div class="blk-t">语法详解 · Grammatik</div>' \
+          '<div class="grammar"><ul style="margin:0;padding-left:18px">' + g + '</ul>' \
+          '<span class="en">EN — ' + esc(en) + '</span></div></div>'
+        out.append(card)
+    return "\n".join(out)
 
-def jena_block():
-    if not JENA:
-        return placeholder("耶拿本地今日待刷新 —— 浏览器抓取 jena.de / newsroom.jena.de 后注入。说一声\"刷新耶拿\"即可。")
-    return "\n".join(
-        f'''<article class="card">
-  <a class="title" href="{esc(x['url'])}" target="_blank" rel="noopener">{esc(x['title'])}</a>
-  <div class="meta"><span class="tag tag-local">{esc(x.get('source','Stadt Jena'))}</span>
-  {('<span class="date">'+esc(x['date'])+'</span>') if x.get('date') else ''}</div>
-  {('<p class="desc">'+esc(x['desc'])+'</p>') if x.get('desc') else ''}
-</article>''' for x in JENA)
+def src_pill(src, kind):
+    c = "local" if kind=="local" else ("easy" if kind=="easy" else "src")
+    return f'<span class="pill {c}">{esc(src)}</span>'
 
-today = datetime.date.today().isoformat()
-UPD = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+def list_cards(arr, is_jena=False):
+    if not arr:
+        name = "耶拿本地" if is_jena else "该板块"
+        return '<div class="card item"><h3>今日待刷新</h3><p>在 Hermes 中说一声「刷新%s」即可注入真实内容。</p></div>' % name
+    out = []
+    for it in arr:
+        kind = "local" if (is_jena or it.get("local")) else ("easy" if it.get("easy") else "src")
+        pills = src_pill(it.get("source",""), kind) + '<span class="pill cat">' + esc(it.get("cat","")) + '</span>'
+        why = ('<div class="why">💡 ' + esc(it["why"]) + '</div>') if it.get("why") else ""
+        if it.get("url"):
+            head = '<a class="headline" href="' + esc(it["url"]) + '" target="_blank" rel="noopener">' + esc(it["title"]) + '</a>'
+        else:
+            head = esc(it.get("title",""))
+        card = '<div class="card item ' + ("jena" if is_jena else "") + '"><h3>' + head + '</h3><p>' + esc(it.get("summary","")) + '</p>\n      <div class="meta">' + pills + '</div>' + why + '</div>'
+        out.append(card)
+    return "\n".join(out)
 
-ICON = (ROOT / "icon_v5c.svg").read_text(encoding="utf-8")
+# 真实日期 (动态)
+now = datetime.datetime.now()
+de_date = now.strftime("%d.%m.%Y")
+stamp = now.strftime("%Y-%m-%d %H:%M")
+
+# 笑脸 logo (内嵌 SVG, 你选定的方案5c)
+LOGO = '''<svg viewBox="0 0 48 48"><rect width="48" height="48" fill="#fff" stroke="#111" stroke-width="3"/>
+  <rect x="14" y="18" width="10" height="10" fill="var(--blue)"/>
+  <circle cx="34" cy="23" r="6" fill="var(--yellow)"/>
+  <rect x="25" y="21" width="3" height="13" fill="var(--red)"/>
+  <path d="M19,38 Q24,43 29,38" stroke="#111" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>'''
 
 HTML = f'''<!DOCTYPE html>
 <html lang="zh">
@@ -87,63 +88,152 @@ HTML = f'''<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>晨读台 · Morgenbrett</title>
 <style>
-:root{{--red:#E2231A;--blue:#21409A;--yellow:#FFC400;--ink:#15120c;--paper:#F4F1EA;--line:#dcd6c8;}}
-*{{box-sizing:border-box;}}
-body{{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;}}
-.banner{{display:flex;align-items:center;gap:16px;padding:22px 28px;border-bottom:3px solid var(--ink);background:#fff;}}
-.banner .logo{{width:56px;height:56px;flex:0 0 auto;}}
-.banner h1{{font-size:26px;margin:0;letter-spacing:.5px;}}
-.banner .sub{{font-size:12px;color:#7a7468;margin-top:2px;}}
-nav{{display:flex;gap:8px;padding:10px 28px;background:var(--ink);flex-wrap:wrap;}}
-nav a{{color:var(--paper);text-decoration:none;font-size:13px;padding:4px 10px;border-radius:4px;opacity:.85;}}
-nav a:hover{{opacity:1;background:rgba(255,255,255,.12);}}
-.wrap{{max-width:1100px;margin:0 auto;padding:22px 20px 60px;}}
-.col h2{{font-size:19px;border-left:8px solid var(--blue);padding-left:10px;margin:30px 0 12px;}}
-.grid{{display:grid;grid-template-columns:1fr 1fr;gap:16px;}}
-@media(max-width:760px){{.grid{{grid-template-columns:1fr;}}}}
-.card{{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;}}
-.card .title{{display:block;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;}}
-.card .title:hover{{color:var(--blue);text-decoration:underline;}}
-.card .desc{{font-size:13px;color:#555;margin:8px 0 0;}}
-.meta{{margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;}}
-.tag{{font-size:11px;padding:2px 8px;border-radius:20px;color:#fff;}}
-.tag-web{{background:var(--red);}}
-.tag-topic{{background:var(--blue);}}
-.tag-local{{background:var(--yellow);color:var(--ink);}}
-.date{{font-size:11px;color:#999;}}
-.card.placeholder{{color:#a39c8c;font-style:italic;background:#faf8f2;}}
-.card.de{{grid-column:1/-1;}}
-.ger{{font-size:17px;font-weight:600;margin:0 0 6px;}}
-.zh{{font-size:14px;color:#444;margin:0 0 10px;}}
-.blk-t{{font-size:12px;font-weight:700;color:var(--red);margin:10px 0 4px;letter-spacing:.5px;}}
-table.vocab{{width:100%;border-collapse:collapse;font-size:13px;margin-top:4px;}}
-table.vocab th,table.vocab td{{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top;}}
-table.vocab th{{background:#f3efe6;}}
-ul.gram{{margin:4px 0 0;padding-left:18px;font-size:13px;color:#444;}}
-.foot{{text-align:center;font-size:12px;color:#999;padding:24px;}}
+  :root{{
+    --red:#E2231A; --blue:#21409A; --yellow:#FFC400; --ink:#111111;
+    --paper:#F4F1EA; --card:#FFFDF7; --muted:#6b6459;
+    --shadow:4px 4px 0 var(--ink);
+  }}
+  *{{box-sizing:border-box}}
+  body{{margin:0;font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--paper);color:var(--ink);line-height:1.5}}
+  header{{background:var(--ink);color:#fff;padding:26px 30px;position:relative;overflow:hidden}}
+  header .geo{{position:absolute;top:0;right:0;height:100%;width:230px}}
+  header .date{{font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.8}}
+  header h1{{margin:6px 0 4px;font-size:30px;font-weight:800;letter-spacing:1px}}
+  header .sub{{font-size:13px;opacity:.85;max-width:560px}}
+  header .logo{{position:absolute;top:18px;right:24px;width:52px;height:52px;z-index:2}}
+  .wrap{{max-width:1180px;margin:0 auto;padding:22px 24px 70px}}
+  nav{{position:sticky;top:0;z-index:5;background:rgba(244,241,234,.94);backdrop-filter:blur(6px);
+    display:flex;gap:10px;padding:12px 0;flex-wrap:wrap;border-bottom:2px solid var(--ink);margin-bottom:26px}}
+  nav a{{font-size:13px;font-weight:700;text-decoration:none;color:var(--ink);background:var(--card);
+    border:2px solid var(--ink);padding:8px 14px;border-radius:2px;box-shadow:3px 3px 0 var(--ink)}}
+  nav a:hover{{background:var(--yellow)}}
+  section{{margin-bottom:48px;scroll-margin-top:70px}}
+  .sec-head{{display:flex;align-items:center;gap:14px;margin-bottom:16px;
+    border-bottom:4px solid var(--ink);padding-bottom:8px}}
+  .sec-head svg{{width:46px;height:46px;flex:none;border:2px solid var(--ink)}}
+  .sec-head h2{{margin:0;font-size:21px;font-weight:800}}
+  .sec-head .em{{font-size:12.5px;color:var(--muted);font-weight:600}}
+  .sec-head .stamp{{margin-left:auto;font-size:12px;color:var(--muted);font-weight:700}}
+  .grid{{display:grid;gap:18px}}
+  .grid.de{{grid-template-columns:1fr}}
+  @media(min-width:820px){{.grid.de{{grid-template-columns:1fr 1fr}}}}
+  .grid.list{{grid-template-columns:1fr}}
+  @media(min-width:900px){{.grid.list{{grid-template-columns:1fr 1fr}}}}
+  .card{{background:var(--card);border:2px solid var(--ink);border-radius:4px;padding:16px 18px;box-shadow:var(--shadow)}}
+  .card.de{{border-top:8px solid var(--blue)}}
+  .card.ai{{border-top:8px solid var(--red)}}
+  .card.gut{{border-top:8px solid var(--yellow)}}
+  .card.jena{{border-top:8px solid var(--ink)}}
+  .de .ger{{font-size:18px;font-weight:700;margin-bottom:4px}}
+  .de .zh{{color:#4a443b;font-size:14px;margin-bottom:12px;font-weight:600}}
+  .de .blk-t{{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:12px 0 6px}}
+  table.vocab{{width:100%;border-collapse:collapse;font-size:12.5px}}
+  table.vocab th{{text-align:left;background:var(--paper);border:1px solid var(--ink);padding:4px 7px;font-size:11px}}
+  table.vocab td{{border:1px solid var(--ink);padding:4px 7px;vertical-align:top}}
+  .art-der{{color:var(--red)}} .art-die{{color:var(--blue)}} .art-das{{color:#1d7a3a}}
+  .pl{{color:var(--muted);font-size:11px}}
+  .grammar{{font-size:13px;background:#fff;border-left:6px solid var(--blue);padding:10px 12px;margin-top:4px}}
+  .grammar li{{margin-bottom:5px}}
+  .grammar .en{{display:block;color:var(--muted);font-style:italic;font-size:12px;margin-top:8px;border-top:1px dashed var(--ink);padding-top:6px}}
+  .item h3{{margin:0 0 6px;font-size:15.5px;line-height:1.4;font-weight:700}}
+  .item p{{margin:0 0 9px;font-size:13.5px;color:#4a443b}}
+  .meta{{display:flex;gap:7px;flex-wrap:wrap;align-items:center}}
+  .pill{{font-size:11px;padding:3px 9px;border-radius:2px;font-weight:700;border:1.5px solid var(--ink)}}
+  .pill.cat{{background:var(--blue);color:#fff}}
+  .pill.src{{background:var(--red);color:#fff}}
+  .pill.local{{background:var(--yellow);color:var(--ink)}}
+  .pill.easy{{background:#fff;color:var(--ink)}}
+  .item a.headline{{color:var(--ink);text-decoration:none}}
+  .item a.headline:hover{{text-decoration:underline;color:var(--red)}}
+  .why{{font-size:12px;color:var(--muted);margin-top:8px;border-top:1px dashed var(--ink);padding-top:7px;font-weight:600}}
+  footer{{text-align:center;color:var(--muted);font-size:12px;padding:24px;border-top:2px solid var(--ink)}}
 </style>
 </head>
 <body>
-<header class="banner">
-  <div class="logo">{ICON}</div>
-  <div>
-    <h1>晨读台 · MORGENBRETT</h1>
-    <div class="sub">每日德语 A2 · AI 快讯 · 肠道菌群 · 耶拿本地 — 更新于 {UPD}</div>
-  </div>
+<header>
+  <svg class="geo" viewBox="0 0 230 110" preserveAspectRatio="none" aria-hidden="true">
+    <rect x="0" y="0" width="230" height="110" fill="#111"/>
+    <circle cx="60" cy="55" r="46" fill="var(--blue)"/>
+    <rect x="120" y="20" width="70" height="70" fill="var(--red)"/>
+    <polygon points="40,100 120,10 200,100" fill="var(--yellow)" opacity=".9"/>
+  </svg>
+  {LOGO}
+  <div class="date" id="date">{de_date}</div>
+  <h1>晨读台 · MORGENBRETT</h1>
+  <div class="sub">德语 A2 · AI 快讯 · 肠道菌群 · 耶拿本地 — 每天早晨，开电脑即读</div>
 </header>
-<nav>
-  <a href="#de">德语 A2</a><a href="#ai">AI 快讯</a><a href="#gut">肠道菌群</a><a href="#jena">耶拿本地</a>
-</nav>
+
 <div class="wrap">
-  <section class="col" id="de"><h2>德语 A2 · 每日长句（真实时事）</h2><div class="grid">{dea2_block()}</div></section>
-  <section class="col" id="ai"><h2>AI 快讯（多源 RSS）</h2><div class="grid">{"".join(ai_card(x) for x in AI) or placeholder("今日 AI 抓取为空")}</div></section>
-  <section class="col" id="gut"><h2>肠道菌群（Nature 等）</h2><div class="grid">{"".join(gut_card(x) for x in GUT) or placeholder("今日菌群抓取为空")}</div></section>
-  <section class="col" id="jena"><h2>耶拿本地</h2><div class="grid">{"".join(jena_block() if False else jena_block())}</div></section>
+  <nav>
+    <a href="#de">▦ 德语 A2</a>
+    <a href="#ai">● AI 快讯</a>
+    <a href="#gut">◐ 肠道菌群</a>
+    <a href="#jena">▲ 耶拿本地</a>
+  </nav>
+
+  <section id="de">
+    <div class="sec-head">
+      <svg viewBox="0 0 48 48"><rect width="48" height="48" fill="#fff" stroke="#111" stroke-width="3"/>
+        <circle cx="15" cy="15" r="9" fill="var(--blue)"/>
+        <rect x="27" y="25" width="13" height="13" fill="var(--red)"/>
+        <polygon points="27,7 41,7 34,19" fill="var(--yellow)"/></svg>
+      <h2>德语 A2 · 每日长句</h2>
+      <span class="em">真实时事主题（nachrichtenleicht / tagesschau）· 逐词解析 · 详细语法</span>
+      <span class="stamp">更新于 {stamp}</span>
+    </div>
+    <div class="grid de" id="de-grid">{de_cards()}</div>
+  </section>
+
+  <section id="ai">
+    <div class="sec-head">
+      <svg viewBox="0 0 48 48"><rect width="48" height="48" fill="#fff" stroke="#111" stroke-width="3"/>
+        <line x1="14" y1="14" x2="34" y2="20" stroke="#111" stroke-width="2"/>
+        <line x1="14" y1="14" x2="24" y2="36" stroke="#111" stroke-width="2"/>
+        <line x1="34" y1="20" x2="24" y2="36" stroke="#111" stroke-width="2"/>
+        <circle cx="14" cy="14" r="6" fill="var(--red)"/>
+        <circle cx="34" cy="20" r="6" fill="var(--blue)"/>
+        <circle cx="24" cy="36" r="6" fill="var(--yellow)"/></svg>
+      <h2>AI 快讯（多源 RSS 自动抓取）</h2>
+      <span class="em">TechCrunch / The Verge</span>
+      <span class="stamp">更新于 {stamp}</span>
+    </div>
+    <div class="grid list" id="ai-grid">{list_cards(AI)}</div>
+  </section>
+
+  <section id="gut">
+    <div class="sec-head">
+      <svg viewBox="0 0 48 48"><rect width="48" height="48" fill="#fff" stroke="#111" stroke-width="3"/>
+        <circle cx="17" cy="18" r="8" fill="var(--yellow)"/>
+        <circle cx="31" cy="22" r="7" fill="var(--blue)"/>
+        <circle cx="22" cy="33" r="6" fill="var(--red)"/>
+        <line x1="17" y1="18" x2="31" y2="22" stroke="#111" stroke-width="1.5"/>
+        <line x1="31" y1="22" x2="22" y2="33" stroke="#111" stroke-width="1.5"/></svg>
+      <h2>肠道菌群 · 最新研究（Nature RSS）</h2>
+      <span class="em">Nature Microbiome 等期刊</span>
+      <span class="stamp">更新于 {stamp}</span>
+    </div>
+    <div class="grid list" id="gut-grid">{list_cards(GUT)}</div>
+  </section>
+
+  <section id="jena">
+    <div class="sec-head">
+      <svg viewBox="0 0 48 48"><rect width="48" height="48" fill="#fff" stroke="#111" stroke-width="3"/>
+        <rect x="20" y="8" width="10" height="34" fill="var(--yellow)"/>
+        <circle cx="13" cy="14" r="6" fill="var(--blue)"/>
+        <rect x="8" y="42" width="32" height="4" fill="var(--red)"/></svg>
+      <h2>耶拿本地</h2>
+      <span class="em">官方源 jena.de / Stadt Jena</span>
+      <span class="stamp">更新于 {stamp}</span>
+    </div>
+    <div class="grid list" id="jena-grid">{list_cards(JENA, is_jena=True)}</div>
+  </section>
+
+  <footer>晨读台 · 免费 RSS 驱动 · 每天 07:30 耶拿时间自动更新（GitHub Actions）· 数据来源见每卡「来源」标签</footer>
 </div>
-<footer class="foot">晨读台 · 免费 RSS 驱动 · 每天 07:30 耶拿时间自动更新（GitHub Actions）</footer>
 </body>
 </html>'''
 
 out = ROOT / "morning.html"
 out.write_text(HTML, encoding="utf-8")
-print(f"生成 {out}  ({len(HTML)//1024} KB)  AI={len(AI)} 菌群={len(GUT)} 德新={len(DENEWS)} 德A2={len(DEA2)} 耶拿={len(JENA)}")
+print(f"生成 morning.html ({len(HTML)//1024} KB) AI={len(AI)} 菌群={len(GUT)} 德新={len(DENEWS)} 德A2={len(DEA2)} 耶拿={len(JENA)} 日期={de_date}")
