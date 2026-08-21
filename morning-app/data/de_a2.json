@@ -6,7 +6,20 @@
     "cat": "国际",
     "local": false,
     "summary": "Russland hat wieder die Hauptstadt Kiew angegriffen. Mindestens 16 Menschen sind gestorben. Russland benutzt besonders schnelle Raketen, die die Ukraine nicht stoppen kann.",
-    "why": "真实时事德语素材：过去时(ist gestorben)、国际新闻常用表达。适合练'A2 短讯阅读'。"
+    "why": "真实时事德语素材：过去时(ist gestorben)、国际新闻常用表达。适合练 A2 短讯阅读。",
+    "words": [
+      {"w": "viele", "note": "不定代词/形容词，'许多'，修饰复数阴性 Tote", "zh": "许多"},
+      {"w": "die Tote", "art": "die", "note": "名词，复数，'死者'（Toter 的复数）", "zh": "死者"},
+      {"w": "bei", "note": "介词，+Dativ，'在…情况下/在…事件中'", "zh": "在…时"},
+      {"w": "der Angriff", "art": "der", "note": "名词，'袭击'；angreifen 的名词形", "zh": "袭击"},
+      {"w": "auf", "note": "介词，+Akk，表方向'对…（发起）'", "zh": "对"},
+      {"w": "sind gestorben", "note": "动词 sterben 的 Perfekt（助动词 sein + Partizip II），'死去'", "zh": "已死亡"}
+    ],
+    "grammar": [
+      "主语 'Russland' 为中性专名，动词用 hat…angegriffen（Perfekt，弱变化动词，ge-…-t）。",
+      "'Mindestens 16 Menschen sind gestorben' — sterben 用 sein 作助动词（表示状态变化的不及物动词）。",
+      "'die die Ukraine nicht stoppen kann' — 关系从句，关系代词 die 指代 Raketen，动词置末（框型结构）。"
+    ]
   },
   {
     "title": "Deutsche Firmen verkaufen wieder mehr Waren im Ausland",
@@ -15,7 +28,20 @@
     "cat": "经济",
     "local": false,
     "summary": "Die Wirtschaft in Deutschland ist schon länger in einer Krise. Jetzt gibt es gute Nachrichten: Deutsche Firmen verkaufen wieder mehr im Ausland.",
-    "why": "经济类词汇(exportieren, die Wirtschaft, die Krise)是 A2 常见主题。"
+    "why": "经济类词汇(exportieren, die Wirtschaft, die Krise)是 A2 常见主题。",
+    "words": [
+      {"w": "deutsche", "note": "形容词，按定冠词变格（无冠词复数弱变化 -e），'德国的'", "zh": "德国的"},
+      {"w": "die Firma", "art": "die", "pl": "Firmen", "note": "名词，'公司'，复数加 -en", "zh": "公司"},
+      {"w": "verkaufen", "note": "动词（可分/不可分？此处不可分），'出售'", "zh": "卖"},
+      {"w": "wieder", "note": "副词，'再次/又'", "zh": "又"},
+      {"w": "die Ware", "art": "die", "pl": "Waren", "note": "名词，'商品/货物'", "zh": "商品"},
+      {"w": "im Ausland", "note": "固定搭配 in + dem Ausland = im Ausland，'在国外'", "zh": "在国外"}
+    ],
+    "grammar": [
+      "'Die Wirtschaft … ist … in einer Krise' — sein 的 Präsens 第三人称单数 ist，介词 in + Dativ（状态）。",
+      "'Deutsche Firmen verkaufen … mehr' — 零冠词复数名词，形容词 deutsche 弱变化词尾 -e。",
+      "'im Ausland' = in dem Ausland，介词 in 与定冠词 dem 缩合。"
+    ]
   },
   {
     "title": "In Deutschland gibt es immer mehr Gottes-Anbeterinnen",
@@ -24,7 +50,20 @@
     "cat": "自然",
     "local": false,
     "summary": "Gottes-Anbeterinnen sind große Insekten. Forscher sagen: In Deutschland leben immer mehr davon. Der Grund ist der Klima-Wandel.",
-    "why": "科普+气候词汇，句子结构简单，很适合 A2 精读。"
+    "why": "科普+气候词汇，句子结构简单，很适合 A2 精读。",
+    "words": [
+      {"w": "es gibt", "note": "固定结构，'有/存在'（es 形式主语，宾语用 Akkusativ）", "zh": "有"},
+      {"w": "immer mehr", "note": "比较级叠加，'越来越多'", "zh": "越来越多"},
+      {"w": "die Gottes-Anbeterin", "art": "die", "pl": "Gottes-Anbeterinnen", "note": "名词，'螳螂'（复合词：Gott+Anbeterin）", "zh": "螳螂"},
+      {"w": "das Insekt", "art": "das", "pl": "Insekten", "note": "名词，'昆虫'", "zh": "昆虫"},
+      {"w": "der Grund", "art": "der", "note": "名词，'原因'", "zh": "原因"},
+      {"w": "der Wandel", "art": "der", "note": "名词，'变化'；Klima-Wandel = 气候变化", "zh": "变化"}
+    ],
+    "grammar": [
+      "'In Deutschland gibt es …' — es gibt 表存在，地点状语前置，动词 gibt 在主语(es)前（倒装）。",
+      "'In Deutschland leben immer mehr davon' — leben 现在时复数，davon = von + dem（代指 Insekten）。",
+      "复合名词 Gottes-Anbeterin 由 Gottes(Genitiv) + Anbeterin 构成，词性随后一词(-in → die)。"
+    ]
   },
   {
     "title": "Die USA verhängen Strafen gegen wichtiges internationales Gericht",
@@ -33,7 +72,20 @@
     "cat": "国际",
     "local": false,
     "summary": "Die USA haben Strafen gegen Menschen verhängt, die für den Internationalen Straf-Gerichtshof arbeiten. Das Gericht verurteilt zum Beispiel Kriegs-Verbrecher.",
-    "why": "internationale Politik 词汇；带关系从句，练 A2 从句。"
+    "why": "internationale Politik 词汇；带关系从句，练 A2 从句。",
+    "words": [
+      {"w": "die USA", "note": "专有名词（复数），'美国'", "zh": "美国"},
+      {"w": "verhängen", "note": "动词，'施以/颁布（惩罚）'", "zh": "施加"},
+      {"w": "die Strafe", "art": "die", "pl": "Strafen", "note": "名词，'惩罚'", "zh": "惩罚"},
+      {"w": "gegen", "note": "介词，+Akk，'针对/反对'", "zh": "针对"},
+      {"w": "das Gericht", "art": "das", "note": "名词，'法庭/法院'", "zh": "法庭"},
+      {"w": "verurteilen", "note": "动词，'判决/谴责'", "zh": "判决"}
+    ],
+    "grammar": [
+      "'Die USA haben … verhängt' — haben + Partizip II（Perfekt，强变化 verhängen→verhängt）。",
+      "'Menschen, die … arbeiten' — 关系从句，关系代词 die 指代 Menschen（复数），动词 arbeiten 置末。",
+      "介词 gegen 要求 Akkusativ（gegen Menschen）。"
+    ]
   },
   {
     "title": "In einigen Regionen in Deutschland riecht es nach Feuer",
@@ -42,7 +94,20 @@
     "cat": "本地/环境",
     "local": false,
     "summary": "In den letzten Wochen gab es große Wald-Brände. Der Wind bläst den Rauch weit. In einigen Orten in Deutschland riecht es deshalb nach Feuer.",
-    "why": "es 形式主语(es riecht nach...)是 A2 语法重点。"
+    "why": "es 形式主语(es riecht nach...)是 A2 语法重点。",
+    "words": [
+      {"w": "einige", "note": "不定代词，'一些'，修饰复数", "zh": "一些"},
+      {"w": "die Region", "art": "die", "pl": "Regionen", "note": "名词，'地区'", "zh": "地区"},
+      {"w": "riechen", "note": "动词，'闻起来'，riecht 为第三人称单数", "zh": "闻"},
+      {"w": "es", "note": "形式主语（无人称 es），真正的'主语'是 nach Feuer", "zh": "（形式主语）"},
+      {"w": "nach", "note": "介词，+Dativ，'…的味道（riechen nach）'", "zh": "…的气味"},
+      {"w": "das Feuer", "art": "das", "note": "名词，'火'", "zh": "火"}
+    ],
+    "grammar": [
+      "'es riecht nach Feuer' — 无人称结构，es 为形式主语，真实语义宾语是 nach Feuer（Dativ）。",
+      "'In den letzten Wochen gab es …' — es gab（过去存在），in + Dativ 表时间范围。",
+      "'der Wind bläst den Rauch' — bläst 为强变化动词 blasen 的第三人称单数，Rauch 为 Akkusativ 宾语。"
+    ]
   },
   {
     "title": "Fußball-Spieler Jamal Musiala erklärt seine Ohnmachts-Anfälle",
@@ -51,6 +116,19 @@
     "cat": "体育",
     "local": false,
     "summary": "Jamal Musiala ist ein deutscher Fußball-Spieler bei Bayern München. Er ist bei 2 Spielen ohnmächtig geworden. Jetzt sagt er: Ich habe eine Krankheit.",
-    "why": "体育+健康话题，kommen 的完成时(ist geworden)可练。"
+    "why": "体育+健康话题，kommen 的完成时(ist geworden)可练。",
+    "words": [
+      {"w": "der Spieler", "art": "der", "note": "名词，'运动员'", "zh": "运动员"},
+      {"w": "erklären", "note": "动词，'解释'", "zh": "解释"},
+      {"w": "sein", "note": "物主代词，'他的'（seine）", "zh": "他的"},
+      {"w": "die Ohnmacht", "art": "die", "note": "名词，'昏迷'，Ohnmachts-Anfall = 晕厥发作", "zh": "昏迷"},
+      {"w": "geworden", "note": "动词 werden 的 Partizip II，'成为/变得'（与 sein 构成 Perfekt）", "zh": "变得"},
+      {"w": "die Krankheit", "art": "die", "pl": "Krankheiten", "note": "名词，'疾病'", "zh": "疾病"}
+    ],
+    "grammar": [
+      "'Er ist … ohnmächtig geworden' — werden 的 Perfekt 用 sein + geworden（状态变化）。",
+      "'Ich habe eine Krankheit' — haben + Akkusativ 宾语（eine Krankheit）。",
+      "复合词 Fußball-Spieler：Fußball + Spieler，词性随 Spieler（der）。"
+    ]
   }
 ]
