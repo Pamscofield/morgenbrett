@@ -45,6 +45,26 @@ def list_cards(arr, is_jena=False):
         out.append(card)
     return "\n".join(out)
 
+def de_cards(arr):
+    if not arr:
+        return '<div class="card item"><h3>德语 A2 今日待刷新</h3><p>在 Hermes 中说一声「刷新德语」，我用浏览器抓取 nachrichtenleicht 真实简易德语并注入。绝不编造。</p></div>'
+    out = []
+    for s in arr:
+        pills = src_pill(s.get("source",""), "easy") + '<span class="pill cat">' + esc(s.get("cat","")) + '</span>'
+        why = ('<div class="why">💡 ' + esc(s["why"]) + '</div>') if s.get("why") else ""
+        head = ('<a class="headline" href="' + esc(s.get("url","")) + '" target="_blank" rel="noopener">' + esc(s.get("title","")) + '</a>') if s.get("url") else esc(s.get("title",""))
+        rows = ""
+        for w in s.get("words", []):
+            art = ('<b class="' + art_class(w.get('art','')) + '">' + esc(w['art']) + '</b> ') if w.get('art') else ''
+            pl = (' <span class="pl">' + esc(w['pl']) + '</span>') if w.get('pl') else ''
+            rows += "<tr><td>" + art + esc(w['w']) + pl + "</td><td>" + esc(w.get('note','')) + "</td><td>" + esc(w.get('zh','')) + "</td></tr>"
+        vocab = ('<div class="blk-t">逐词解析 · Wortschatz</div><table class="vocab"><tr><th>词条</th><th>解析（词性/格/时态）</th><th>中文</th></tr>' + rows + '</table>') if rows else ""
+        g = "".join("<li>" + esc(x) + "</li>" for x in s.get("grammar", []))
+        grammar = ('<div class="blk-t">语法详解 · Grammatik</div><div class="grammar"><ul style="margin:0;padding-left:18px">' + g + '</ul></div>') if g else ""
+        card = '<div class="card item de"><h3>' + head + '</h3><p>' + esc(s.get("summary","")) + '</p><div class="meta">' + pills + '</div>' + why + vocab + grammar + '</div>'
+        out.append(card)
+    return "\n".join(out)
+
 # 真实日期 (动态)
 now = datetime.datetime.now()
 de_date = now.strftime("%d.%m.%Y")
@@ -144,7 +164,7 @@ HTML = f'''<!DOCTYPE html>
       <span class="em">真实时事主题（nachrichtenleicht / tagesschau）· 逐词解析 · 详细语法</span>
       <span class="stamp">更新于 {stamp}</span>
     </div>
-    <div class="grid list" id="de-grid">{list_cards(DEA2)}</div>
+    <div class="grid list" id="de-grid">{de_cards(DEA2)}</div>
   </section>
 
   <section id="ai">
