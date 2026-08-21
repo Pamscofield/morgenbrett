@@ -46,29 +46,43 @@ def items_from_rss(xml):
 
 FEEDS = {
     "ai": [
-        ("TechCrunch AI", "https://techcrunch.com/category/artificial-intelligence/feed/"),
-        ("The Verge",     "https://www.theverge.com/rss/index.xml"),
+        ("TechCrunch AI",      "https://techcrunch.com/category/artificial-intelligence/feed/"),
+        ("The Verge AI",       "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"),
+        ("MIT Tech Review",    "https://www.technologyreview.com/feed/"),
+        ("Wired AI",           "https://www.wired.com/feed/tag/ai/latest/rss"),
     ],
     "gut": [
-        ("Nature Microbiome", "https://www.nature.com/subjects/microbiome.rss"),
+        ("Nature Microbiome",  "https://www.nature.com/subjects/microbiome.rss"),
+        ("The Guardian (Microbiology)", "https://www.theguardian.com/science/microbiology/rss"),
+        ("ScienceAlert",       "https://www.sciencealert.com/rss"),
     ],
     "de_news": [
         ("SPIEGEL International", "https://www.spiegel.de/international/index.rss"),
     ],
 }
 
-def collect(key, n=6):
-    out = []
+def collect(key, n=6, per=3):
+    # 每个源最多取 per 条, 轮流从各源取, 保证多源多样性
+    pools = []
     for src, url in FEEDS[key]:
         try:
             xml = fetch(url)
-            for it in items_from_rss(xml):
-                it["source"] = src
-                out.append(it)
-                if len(out) >= n:
-                    return out
+            items = [dict(it, source=src) for it in items_from_rss(xml)]
+            pools.append((src, items))
         except Exception as e:
             print(f"  [warn] {src}: {e}")
+    out = []
+    idx = 0
+    while len(out) < n and any(pools):
+        progressed = False
+        for i, (src, items) in enumerate(pools):
+            if items:
+                out.append(items.pop(0))
+                progressed = True
+                if len(out) >= n:
+                    break
+        if not progressed:
+            break
     return out[:n]
 
 def dump(key, items):
