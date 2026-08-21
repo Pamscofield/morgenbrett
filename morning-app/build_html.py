@@ -37,11 +37,12 @@ def list_cards(arr, is_jena=False):
         kind = "local" if (is_jena or it.get("local")) else ("easy" if it.get("easy") else "src")
         pills = src_pill(it.get("source",""), kind) + '<span class="pill cat">' + esc(it.get("cat","")) + '</span>'
         why = ('<div class="why">💡 ' + esc(it["why"]) + '</div>') if it.get("why") else ""
+        zh = ('<div class="zh-sum">🇨🇳 ' + esc(it["zh"]) + '</div>') if it.get("zh") else ""
         if it.get("url"):
-            head = '<a class="headline" href="' + esc(it["url"]) + '" target="_blank" rel="noopener">' + esc(it["title"]) + '</a>'
+            head = '<a class="headline" href="' + esc(it["url"]) + '" target="_blank" rel="noopener">' + esc(it.get("title","")) + '</a>'
         else:
             head = esc(it.get("title",""))
-        card = '<div class="card item ' + ("jena" if is_jena else "") + '"><h3>' + head + '</h3><p>' + esc(it.get("summary","")) + '</p>\n      <div class="meta">' + pills + '</div>' + why + '</div>'
+        card = '<div class="card item ' + ("jena" if is_jena else "") + '"><h3>' + head + '</h3><p>' + esc(it.get("summary","")) + '</p>' + zh + '\n      <div class="meta">' + pills + '</div>' + why + '</div>'
         out.append(card)
     return "\n".join(out)
 
@@ -57,11 +58,13 @@ def de_cards(arr):
         for w in s.get("words", []):
             art = ('<b class="' + art_class(w.get('art','')) + '">' + esc(w['art']) + '</b> ') if w.get('art') else ''
             pl = (' <span class="pl">' + esc(w['pl']) + '</span>') if w.get('pl') else ''
-            rows += "<tr><td>" + art + esc(w['w']) + pl + "</td><td>" + esc(w.get('note','')) + "</td><td>" + esc(w.get('zh','')) + "</td></tr>"
-        vocab = ('<div class="blk-t">逐词解析 · Wortschatz</div><table class="vocab"><tr><th>词条</th><th>解析（词性/格/时态）</th><th>中文</th></tr>' + rows + '</table>') if rows else ""
+            lvl = ('<span class="lvl lvl-' + esc(w.get('lvl','A2').replace('+','plus').replace('/','-')) + '">' + esc(w.get('lvl','A2')) + '</span> ') if w.get('lvl') else ''
+            rows += "<tr><td>" + lvl + art + esc(w['w']) + pl + "</td><td>" + esc(w.get('note','')) + "</td><td>" + esc(w.get('zh','')) + "</td></tr>"
+        a1 = ('<div class="a1skip">⏭ A1 基础词已略：' + esc(s["a1skip"]) + '</div>') if s.get("a1skip") else ""
+        vocab = ('<div class="blk-t">逐词解析 · Wortschatz（仅 A2 及以上）</div><table class="vocab"><tr><th>级别</th><th>词条</th><th>解析（词性/格/时态/难点）</th><th>中文</th></tr>' + rows + '</table>') if rows else ""
         g = "".join("<li>" + esc(x) + "</li>" for x in s.get("grammar", []))
         grammar = ('<div class="blk-t">语法详解 · Grammatik</div><div class="grammar"><ul style="margin:0;padding-left:18px">' + g + '</ul></div>') if g else ""
-        card = '<div class="card item de"><h3>' + head + '</h3><p>' + esc(s.get("summary","")) + '</p><div class="meta">' + pills + '</div>' + why + vocab + grammar + '</div>'
+        card = '<div class="card item de"><h3>' + head + '</h3><p>' + esc(s.get("summary","")) + '</p><div class="meta">' + pills + '</div>' + why + vocab + a1 + grammar + '</div>'
         out.append(card)
     return "\n".join(out)
 
@@ -136,6 +139,12 @@ HTML = f'''<!DOCTYPE html>
   .item a.headline{{color:var(--ink);text-decoration:none}}
   .item a.headline:hover{{text-decoration:underline;color:var(--red)}}
   .why{{font-size:12px;color:var(--muted);margin-top:8px;border-top:1px dashed var(--ink);padding-top:7px;font-weight:600}}
+  .lvl{{display:inline-block;font-size:10px;font-weight:800;padding:1px 5px;border-radius:2px;margin-right:4px;vertical-align:middle}}
+  .lvl-A2{{background:var(--blue);color:#fff}}
+  .lvl-B1{{background:var(--yellow);color:#111}}
+  .lvl-C1{{background:var(--red);color:#fff}}
+  .lvl-A1-A2,.lvl-A1plus-A2{{background:#cfc9bd;color:#111}}
+  .a1skip{{font-size:11px;color:var(--muted);background:#efece4;border-left:3px solid #cfc9bd;padding:5px 8px;margin-top:8px;border-radius:2px;font-style:italic}}
   footer{{text-align:center;color:var(--muted);font-size:12px;padding:24px;border-top:2px solid var(--ink)}}
 </style>
 </head>
