@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "title": "Viele Tote bei Raketen-Angriff auf Stadt Kiew",
+    "url": "https://www.nachrichtenleicht.de/angriffe-ukraine-kiew-100.html",
+    "source": "nachrichtenleicht",
+    "cat": "国际",
+    "local": false,
+    "summary": "Russland hat wieder die Hauptstadt Kiew angegriffen. Mindestens 16 Menschen sind gestorben. Russland benutzt besonders schnelle Raketen, die die Ukraine nicht stoppen kann.",
+    "why": "真实时事德语素材：过去时(ist gestorben)、国际新闻常用表达。适合练'A2 短讯阅读'。"
+  },
+  {
+    "title": "Deutsche Firmen verkaufen wieder mehr Waren im Ausland",
+    "url": "https://www.nachrichtenleicht.de/wirtschaft-exporte-legen-zu-100.html",
+    "source": "nachrichtenleicht",
+    "cat": "经济",
+    "local": false,
+    "summary": "Die Wirtschaft in Deutschland ist schon länger in einer Krise. Jetzt gibt es gute Nachrichten: Deutsche Firmen verkaufen wieder mehr im Ausland.",
+    "why": "经济类词汇(exportieren, die Wirtschaft, die Krise)是 A2 常见主题。"
+  },
+  {
+    "title": "In Deutschland gibt es immer mehr Gottes-Anbeterinnen",
+    "url": "https://www.nachrichtenleicht.de/gottes-anbeterinnen-deutschland-100.html",
+    "source": "nachrichtenleicht",
+    "cat": "自然",
+    "local": false,
+    "summary": "Gottes-Anbeterinnen sind große Insekten. Forscher sagen: In Deutschland leben immer mehr davon. Der Grund ist der Klima-Wandel.",
+    "why": "科普+气候词汇，句子结构简单，很适合 A2 精读。"
+  },
+  {
+    "title": "Die USA verhängen Strafen gegen wichtiges internationales Gericht",
+    "url": "https://www.nachrichtenleicht.de/usa-strafen-internationaler-straf-gerichtshof-100.html",
+    "source": "nachrichtenleicht",
+    "cat": "国际",
+    "local": false,
+    "summary": "Die USA haben Strafen gegen Menschen verhängt, die für den Internationalen Straf-Gerichtshof arbeiten. Das Gericht verurteilt zum Beispiel Kriegs-Verbrecher.",
+    "why": "internationale Politik 词汇；带关系从句，练 A2 从句。"
+  },
+  {
+    "title": "In einigen Regionen in Deutschland riecht es nach Feuer",
+    "url": "https://www.nachrichtenleicht.de/brand-geruch-deutschland-100.html",
+    "source": "nachrichtenleicht",
+    "cat": "本地/环境",
+    "local": false,
+    "summary": "In den letzten Wochen gab es große Wald-Brände. Der Wind bläst den Rauch weit. In einigen Orten in Deutschland riecht es deshalb nach Feuer.",
+    "why": "es 形式主语(es riecht nach...)是 A2 语法重点。"
+  },
+  {
+    "title": "Fußball-Spieler Jamal Musiala erklärt seine Ohnmachts-Anfälle",
+    "url": "https://www.nachrichtenleicht.de/musiala-erklaert-ohnmacht-100.html",
+    "source": "nachrichtenleicht",
+    "cat": "体育",
+    "local": false,
+    "summary": "Jamal Musiala ist ein deutscher Fußball-Spieler bei Bayern München. Er ist bei 2 Spielen ohnmächtig geworden. Jetzt sagt er: Ich habe eine Krankheit.",
+    "why": "体育+健康话题，kommen 的完成时(ist geworden)可练。"
+  }
+]
