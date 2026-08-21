@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect x="0" y="0" width="512" height="512" rx="112" ry="112" fill="#F4F1EA"/>
+  <!-- 左眼 = 蓝方 -->
+  <rect x="150" y="180" width="92" height="92" fill="#21409A"/>
+  <!-- 右眼 = 黄圆 -->
+  <circle cx="362" cy="226" r="56" fill="#FFC400"/>
+  <!-- 鼻子 = 红竖线 -->
+  <rect x="251" y="200" width="10" height="104" fill="#E2231A"/>
+  <!-- 嘴巴 = 微笑弧 (鼻子下方) -->
+  <path d="M196,348 Q256,402 316,348" stroke="#15120c" stroke-width="12" fill="none" stroke-linecap="round"/>
+</svg>
