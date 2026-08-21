@@ -24,30 +24,6 @@ def esc(s): return html.escape(str(s))
 def art_class(a):
     return {"der":"art-der","die":"art-die","das":"art-das"}.get(a,"")
 
-# ---------- 德语 A2 卡片 (注入 JSON 格式: {ger,zh,words:[{art,w,pl,zh,note}],grammar:[...],en}) ----------
-def de_cards():
-    if not DEA2:
-        return '<div class="card de"><div class="ger">德语 A2 今日待刷新</div><div class="zh">在 Hermes 中说一声「刷新德语」，我用浏览器抓取 nachrichtenleicht / tagesschau 真实简易德语并注入。绝不编造内容。</div></div>'
-    out = []
-    for s in DEA2:
-        rows = ""
-        for w in s.get("words", []):
-            art = ('<b class="' + art_class(w.get('art','')) + '">' + esc(w['art']) + '</b> ') if w.get('art') else ''
-            pl = (' <span class="pl">' + esc(w['pl']) + '</span>') if w.get('pl') else ''
-            rows += "<tr><td>" + art + esc(w['w']) + pl + "</td><td>" + esc(w.get('note','')) + "</td><td>" + esc(w.get('zh','')) + "</td></tr>"
-        g = "".join("<li>" + esc(x) + "</li>" for x in s.get("grammar", []))
-        en = s.get("en","")
-        card = '<div class="card de">' \
-          '<div class="ger">' + esc(s.get('ger','')) + '</div>' \
-          '<div class="zh">' + esc(s.get('zh_full','')) + '</div>' \
-          '<div class="blk-t">逐词解析 · Wortschatz</div>' \
-          '<table class="vocab"><tr><th>词条</th><th>解析（词性/格/时态）</th><th>中文</th></tr>' + rows + '</table>' \
-          '<div class="blk-t">语法详解 · Grammatik</div>' \
-          '<div class="grammar"><ul style="margin:0;padding-left:18px">' + g + '</ul>' \
-          '<span class="en">EN — ' + esc(en) + '</span></div></div>'
-        out.append(card)
-    return "\n".join(out)
-
 def src_pill(src, kind):
     c = "local" if kind=="local" else ("easy" if kind=="easy" else "src")
     return f'<span class="pill {c}">{esc(src)}</span>'
@@ -73,13 +49,6 @@ def list_cards(arr, is_jena=False):
 now = datetime.datetime.now()
 de_date = now.strftime("%d.%m.%Y")
 stamp = now.strftime("%Y-%m-%d %H:%M")
-
-# 笑脸 logo (内嵌 SVG, 你选定的方案5c)
-LOGO = '''<svg viewBox="0 0 48 48"><rect width="48" height="48" fill="#fff" stroke="#111" stroke-width="3"/>
-  <rect x="14" y="18" width="10" height="10" fill="var(--blue)"/>
-  <circle cx="34" cy="23" r="6" fill="var(--yellow)"/>
-  <rect x="25" y="21" width="3" height="13" fill="var(--red)"/>
-  <path d="M19,38 Q24,43 29,38" stroke="#111" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>'''
 
 HTML = f'''<!DOCTYPE html>
 <html lang="zh">
@@ -152,13 +121,6 @@ HTML = f'''<!DOCTYPE html>
 </head>
 <body>
 <header>
-  <svg class="geo" viewBox="0 0 230 110" preserveAspectRatio="none" aria-hidden="true">
-    <rect x="0" y="0" width="230" height="110" fill="#111"/>
-    <circle cx="60" cy="55" r="46" fill="var(--blue)"/>
-    <rect x="120" y="20" width="70" height="70" fill="var(--red)"/>
-    <polygon points="40,100 120,10 200,100" fill="var(--yellow)" opacity=".9"/>
-  </svg>
-  {LOGO}
   <div class="date" id="date">{de_date}</div>
   <h1>晨读台 · MORGENBRETT</h1>
   <div class="sub">德语 A2 · AI 快讯 · 肠道菌群 · 耶拿本地 — 每天早晨，开电脑即读</div>
@@ -182,7 +144,7 @@ HTML = f'''<!DOCTYPE html>
       <span class="em">真实时事主题（nachrichtenleicht / tagesschau）· 逐词解析 · 详细语法</span>
       <span class="stamp">更新于 {stamp}</span>
     </div>
-    <div class="grid de" id="de-grid">{de_cards()}</div>
+    <div class="grid list" id="de-grid">{list_cards(DEA2)}</div>
   </section>
 
   <section id="ai">
