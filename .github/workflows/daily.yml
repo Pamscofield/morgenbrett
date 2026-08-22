@@ -1,0 +1,33 @@
+name: daily-morgenbrett
+
+on:
+  schedule:
+    # 耶拿时间 07:30 = UTC 05:30 (CEST UTC+2)
+    - cron: "30 5 * * *"
+  workflow_dispatch:      # 允许手动触发
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Fetch free RSS and build
+        run: |
+          python morning-app/build.py
+          python morning-app/build_html.py
+          cp morning-app/morning.html index.html
+      - name: Commit updated page
+        run: |
+          git config user.name "morgenbrett-bot"
+          git config user.email "bot@morgenbrett.local"
+          git add index.html morning-app/data/*.json
+          git commit -m "auto: daily update $(date +%F)" || echo "no changes"
+          git push
