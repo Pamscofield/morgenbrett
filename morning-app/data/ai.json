@@ -1,7 +1,25 @@
 [
   {
-    "title": "Lightspeed targets $250M for new India fund, focusing on early-stage AI",
-    "url": "https://techcrunch.com/2026/09/24/lightspeed-targets-250m-for-new-india-fund-focusing-on-early-stage-ai/",
+    "title": "At Meta Connect, the company’s smart glasses were everywhere",
+    "url": "https://techcrunch.com/2026/09/25/at-meta-connect-the-companys-smart-glasses-were-everywhere/",
+    "desc": "",
+    "source": "TechCrunch AI"
+  },
+  {
+    "title": "The Download: the Pentagon’s AI-powered lie detector and young organ limits",
+    "url": "https://www.technologyreview.com/2026/09/25/1145157/the-download-pentagon-ai-lie-detector-young-organ-limits/",
+    "desc": "",
+    "source": "MIT Tech Review"
+  },
+  {
+    "title": "Thieves Stole ‘Nvidia’ Trailers. They Got 20 Tons of Sand",
+    "url": "https://www.wired.com/story/thieves-stole-nvidia-trailers-they-got-20-tons-of-sand/",
+    "desc": "They wanted the silicon. They got the sand.",
+    "source": "Wired AI"
+  },
+  {
+    "title": "Crusoe abandons $1.25B plan to use Boom turbines at AI data centers",
+    "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -12,27 +30,9 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "I Think I Found an AI Agent Worth the Risk",
-    "url": "https://www.wired.com/story/i-finally-found-an-ai-agent-worth-the-risk/",
-    "desc": "Instinct saved me $550, booked my restaurant reservations, and warned me about a phishing scam. It also wasted $64 and might be a security nightmare.",
-    "source": "Wired AI"
-  },
-  {
-    "title": "Bring your co-founder, partner, or colleague and get 50% off a second TechCrunch Disrupt 2026 pass",
-    "url": "https://techcrunch.com/2026/09/24/bring-your-co-founder-partner-or-colleague-and-get-50-off-a-second-techcrunch-disrupt-2026-pass/",
-    "desc": "",
-    "source": "TechCrunch AI"
-  },
-  {
-    "title": "Young organs may not be a fountain of youth for recipients",
-    "url": "https://www.technologyreview.com/2026/09/25/1145083/young-organs-may-not-be-a-fountain-of-youth-for-recipients/",
-    "desc": "",
-    "source": "MIT Tech Review"
-  },
-  {
-    "title": "Google’s Gemini Can Now Make Calls for You on Pixel Phones",
-    "url": "https://www.wired.com/story/googles-gemini-can-now-make-calls-for-you-on-pixel-phones/",
-    "desc": "Call for Me—a feature that’s exclusive to the Pixel 11 series—gives robocalls a new meaning.",
+    "title": "Appeals Court Lets the Pentagon Designate Anthropic a Supply-Chain Risk",
+    "url": "https://www.wired.com/story/appeals-court-lets-the-pentagon-designate-anthropic-a-supply-chain-risk/",
+    "desc": "The AI lab had argued multiple violations of its rights, but a divided panel of judges sided with the Trump administration.",
     "source": "Wired AI"
   }
 ]
