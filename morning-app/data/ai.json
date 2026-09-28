@@ -1,7 +1,25 @@
 [
   {
-    "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
-    "url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/",
+    "title": "Anthropic’s CEO is about to have dinner with President Trump",
+    "url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
+    "desc": "",
+    "source": "TechCrunch AI"
+  },
+  {
+    "title": "Who’s liable when AI agents go rogue?",
+    "url": "https://www.technologyreview.com/2026/09/28/1145197/whos-liable-when-ai-agents-go-rogue/",
+    "desc": "",
+    "source": "MIT Tech Review"
+  },
+  {
+    "title": "OpenAI Pauses Training Its Most Powerful Models After Rogue Agents Target Government",
+    "url": "https://www.wired.com/story/openai-pauses-training-most-powerful-models-after-rogue-agents-target-government/",
+    "desc": "Sam Altman says the company “have not been as fast as we would have liked” at dealing with security breaches, after news of further incidents over the summer forces another temporary halt.",
+    "source": "Wired AI"
+  },
+  {
+    "title": "Can Muse overcome Meta’s trust issues?",
+    "url": "https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -12,27 +30,9 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "Meta’s Muse Is Adults-Only. Why Does It Look Like a Kids’ Toy?",
-    "url": "https://www.wired.com/story/meta-muse-is-adults-only-why-does-it-look-like-a-cute-kids-toy/",
-    "desc": "Meta says Muse is just for adults, though its cuddly, Labubu-like mascot—and upcoming Tamagotchi-style AI device—may be disarming for users of all ages.",
-    "source": "Wired AI"
-  },
-  {
-    "title": "Insurers claim AI is already increasing healthcare costs",
-    "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
-    "desc": "",
-    "source": "TechCrunch AI"
-  },
-  {
-    "title": "The Pentagon wants $30 million to build an AI-powered lie detector",
-    "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
-    "desc": "",
-    "source": "MIT Tech Review"
-  },
-  {
-    "title": "Thieves Stole ‘Nvidia’ Trailers. They Got 20 Tons of Sand",
-    "url": "https://www.wired.com/story/thieves-stole-nvidia-trailers-they-got-20-tons-of-sand/",
-    "desc": "They wanted the silicon. They got the sand.",
+    "title": "AI Agents Are About to Flood the Workforce. No One’s Ready for It",
+    "url": "https://www.wired.com/story/ai-agents-are-about-to-flood-the-workforce-no-ones-ready-for-it/",
+    "desc": "Your next coworker might well be an AI agent—and will require a whole new model of workplace interactions.",
     "source": "Wired AI"
   }
 ]
