@@ -1,7 +1,25 @@
 [
   {
-    "title": "Anthropic’s prospectus details losses, growth, and, yes, a warning that its AI could end humanity",
-    "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+    "title": "America.gov gets really weird when you ask it about Minecraft, but it’s not a glitch",
+    "url": "https://techcrunch.com/2026/09/29/america-gov-gets-really-weird-when-you-ask-it-about-minecraft-but-its-not-a-glitch/",
+    "desc": "",
+    "source": "TechCrunch AI"
+  },
+  {
+    "title": "The Download: climate tech companies to watch and AI’s discovery problem",
+    "url": "https://www.technologyreview.com/2026/09/29/1145249/the-download-climate-tech-ai-scientific-discovery/",
+    "desc": "",
+    "source": "MIT Tech Review"
+  },
+  {
+    "title": "OpenAI Gets Sued Over the Hugging Face Hack",
+    "url": "https://www.wired.com/story/openai-sued-over-the-hugging-face-hack/",
+    "desc": "A nonprofit in California is doing what Hugging Face has not—attempting to hold OpenAI legally accountable for the actions of its agents.",
+    "source": "Wired AI"
+  },
+  {
+    "title": "The internet is convinced Elon Musk’s xAI trolled OpenAI’s ‘Dots’ launch",
+    "url": "https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -12,27 +30,9 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "OpenAI Delays Release of Latest Model Over Safety Concerns",
-    "url": "https://www.wired.com/story/openai-delays-release-of-latest-model-over-safety-concerns/",
-    "desc": "The company said its latest Astra model would undergo more work to meet safety standards, and issued an apology for the way it handled the hacking of an Australian government website.",
-    "source": "Wired AI"
-  },
-  {
-    "title": "Peak XV ups Surge seed investment ceiling to $5M, unveils 18-startup cohort",
-    "url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
-    "desc": "",
-    "source": "TechCrunch AI"
-  },
-  {
-    "title": "Making AI an asset, not an expense",
-    "url": "https://www.technologyreview.com/2026/09/29/1145186/making-ai-an-asset-not-an-expense/",
-    "desc": "",
-    "source": "MIT Tech Review"
-  },
-  {
-    "title": "Timnit Gebru Believes There Is No ‘Existential Threat’ From AI",
-    "url": "https://www.wired.com/story/the-big-interview-podcast-timnit-gebru/",
-    "desc": "One of AI’s fiercest critics believes the doom talk is about founders making money, not saving humanity.",
+    "title": "Anthropic Says It Discovered a Crispr-Like System. Now What?",
+    "url": "https://www.wired.com/story/anthropic-says-it-discovered-a-crispr-like-system-now-what/",
+    "desc": "“The experiments are still in the queue. The PR is already live,” says one expert.",
     "source": "Wired AI"
   }
 ]
