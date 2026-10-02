@@ -1,38 +1,38 @@
 [
   {
-    "title": "Google releases Gemini 4 Argon, called its most powerful model yet",
-    "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/",
+    "title": "Musk’s AI chatbot Grok reportedly encouraged Trump to capture  Venezuela’s president",
+    "url": "https://techcrunch.com/2026/10/01/musks-ai-chatbot-grok-reportedly-encouraged-trump-to-capture-venezuelas-president/",
     "desc": "",
     "source": "TechCrunch AI"
   },
   {
-    "title": "An AI “mind-reading” tool can reconstruct what you’re looking at based on a brain scan",
-    "url": "https://www.technologyreview.com/2026/10/01/1145588/ai-mind-reading-reconstructs-what-youre-looking-at/",
+    "title": "A new contest pits competitors against each other in a race to biological youth",
+    "url": "https://www.technologyreview.com/2026/10/02/1145610/younger-contest-race-to-biological-youth/",
     "desc": "",
     "source": "MIT Tech Review"
   },
   {
-    "title": "Trump’s AI Safety ‘Accord’ Is a Fancy Pinky-Swear",
-    "url": "https://www.wired.com/story/trumps-ai-safety-accord-is-a-fancy-pinky-swear/",
-    "desc": "Six major AI companies signed a voluntary agreement with the White House this week vowing to implement safeguards. It’s unclear how much that matters.",
+    "title": "A Flaw in ChatGPT’s Mac App Could Have Let Hackers Grab Sensitive Data",
+    "url": "https://www.wired.com/story/a-flaw-in-chatgpts-mac-app-could-have-let-hackers-grab-sensitive-data/",
+    "desc": "While the focus has been on AI agents’ hacking capabilities, a recently patched vulnerability in a ChatGPT app shows that AI software is itself an inviting—and vulnerable—target.",
     "source": "Wired AI"
   },
   {
-    "title": "Valor, Atreides, and Sequoia back AI startup Flow Engineering at $750M valuation",
-    "url": "https://techcrunch.com/2026/09/30/valor-atreides-and-sequoia-back-ai-startup-flow-engineering-at-750m-valuation/",
+    "title": "ChatGPT can now virtually try on clothes for you",
+    "url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/",
     "desc": "",
     "source": "TechCrunch AI"
   },
   {
-    "title": "How smaller, distributed batteries could help the grid",
-    "url": "https://www.technologyreview.com/2026/10/01/1145435/distributed-batteries/",
+    "title": "Don’t be fooled—LLMs don’t reason",
+    "url": "https://www.technologyreview.com/2026/10/02/1145639/dont-be-fooled-llms-dont-reason/",
     "desc": "",
     "source": "MIT Tech Review"
   },
   {
-    "title": "The Battle to Be Your Personal AI Agent Is Here",
-    "url": "https://www.wired.com/story/ai-agents-dots-devday-muse-battling-it-out/",
-    "desc": "OpenAI's Dots and Meta's Muse are vying to be your AI agent of choice. I've tried both—and I suspect you will too.",
+    "title": "Health Care Workers Are Tired of Cleaning Up Palantir’s Mess",
+    "url": "https://www.wired.com/story/healthcare-workers-are-tired-of-cleaning-up-palantirs-mess/",
+    "desc": "A hospital giant and radiology network turned to Palantir to streamline scheduling, but nurses and other staff say the new software is causing errors, burnout, and frustration.",
     "source": "Wired AI"
   }
 ]
