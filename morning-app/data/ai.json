@@ -1,7 +1,25 @@
 [
   {
-    "title": "Pretend you’re sitting at Elizabeth Holmes’ desk on this weirdly detailed website",
-    "url": "https://techcrunch.com/2026/10/08/pretend-youre-sitting-at-elizabeth-holmes-desk-on-this-weirdly-detailed-website/",
+    "title": "Anthropic can’t reliably control its AI agents. It’s cutting off its internal evals from the live internet instead",
+    "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
+    "desc": "",
+    "source": "TechCrunch AI"
+  },
+  {
+    "title": "The Download: AI’s refusal problem and weight-loss drug side effects",
+    "url": "https://www.technologyreview.com/2026/10/09/1146250/the-download-ai-refusal-problem-weight-loss-drug-side-effects/",
+    "desc": "",
+    "source": "MIT Tech Review"
+  },
+  {
+    "title": "Book Publishers Are Quietly Using More AI. Staff Are Revolting",
+    "url": "https://www.wired.com/story/book-publishers-are-quietly-using-more-ai-staff-are-revolting/",
+    "desc": "Workers at three major publishing houses tell WIRED that LLMs are being used for publicity, cover art, back cover copy, and emails, as some execs push junior staff to champion the tech.",
+    "source": "Wired AI"
+  },
+  {
+    "title": "The maker of non-text AI model Jev valued at $7.5B just weeks after launch",
+    "url": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -15,24 +33,6 @@
     "title": "Even ‘Law & Order’ Is Terrified of AI",
     "url": "https://www.wired.com/story/even-law-and-order-is-terrified-of-ai/",
     "desc": "In its 26th season premiere, the procedural legal drama paints a damning picture of power-mad AI CEOs.",
-    "source": "Wired AI"
-  },
-  {
-    "title": "Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect",
-    "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
-    "desc": "",
-    "source": "TechCrunch AI"
-  },
-  {
-    "title": "Job titles of the future: Delivery drone air traffic controller",
-    "url": "https://www.technologyreview.com/2026/10/09/1145737/job-titles-delivery-drone-air-traffic-controller-trevor-wischnewsky/",
-    "desc": "",
-    "source": "MIT Tech Review"
-  },
-  {
-    "title": "Inside Elon Musk’s Midterm Spending Spree",
-    "url": "https://www.wired.com/story/uncanny-valley-podcast-inside-elon-musks-midterm-spending-spree/",
-    "desc": "This week on “Uncanny Valley,” we discuss where Elon Musk’s PAC is spending millions, the latest ideology Trump claims is dangerous, and the backlash against the designer behind Muse’s logo.",
     "source": "Wired AI"
   }
 ]
