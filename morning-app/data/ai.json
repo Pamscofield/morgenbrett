@@ -1,7 +1,7 @@
 [
   {
-    "title": "Anthropic can’t reliably control its AI agents. It’s cutting off its internal evals from the live internet instead",
-    "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
+    "title": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
+    "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -12,14 +12,14 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "Book Publishers Are Quietly Using More AI. Staff Are Revolting",
-    "url": "https://www.wired.com/story/book-publishers-are-quietly-using-more-ai-staff-are-revolting/",
-    "desc": "Workers at three major publishing houses tell WIRED that LLMs are being used for publicity, cover art, back cover copy, and emails, as some execs push junior staff to champion the tech.",
+    "title": "I Made Terrible Games With Google’s AI Playground",
+    "url": "https://www.wired.com/story/i-made-terrible-games-with-googles-ai-playground/",
+    "desc": "A long day’s haul in the video game slop mines.",
     "source": "Wired AI"
   },
   {
-    "title": "The maker of non-text AI model Jev valued at $7.5B just weeks after launch",
-    "url": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
+    "title": "Apple discloses deal to hire team and license tech from personalized podcast startup Huxe",
+    "url": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -30,9 +30,9 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "Even ‘Law & Order’ Is Terrified of AI",
-    "url": "https://www.wired.com/story/even-law-and-order-is-terrified-of-ai/",
-    "desc": "In its 26th season premiere, the procedural legal drama paints a damning picture of power-mad AI CEOs.",
+    "title": "AI Is Getting Really Good at Messing With Cybercriminals",
+    "url": "https://www.wired.com/story/ai-is-getting-really-good-at-messing-with-cybercriminals/",
+    "desc": "Anti-cybercrime initiatives are increasingly using AI to scam the scammers by tricking them into talking to lifelike bots that they think are real victims.",
     "source": "Wired AI"
   }
 ]
