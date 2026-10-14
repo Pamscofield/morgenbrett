@@ -1,7 +1,25 @@
 [
   {
-    "title": "Just 5 years in, interactive chatbot platform Character.AI files for bankruptcy",
-    "url": "https://techcrunch.com/2026/10/13/just-5-years-in-interactive-chatbot-platform-character-ai-files-for-bankruptcy/",
+    "title": "Science Corporation implants its vision-restoring chip in its first Stargardt disease patient",
+    "url": "https://techcrunch.com/2026/10/13/science-corporation-implants-its-vision-restoring-chip-in-its-first-stargardt-disease-patient/",
+    "desc": "",
+    "source": "TechCrunch AI"
+  },
+  {
+    "title": "The US military’s race to make fake blood",
+    "url": "https://www.technologyreview.com/2026/10/14/1145807/us-military-race-to-make-fake-blood/",
+    "desc": "",
+    "source": "MIT Tech Review"
+  },
+  {
+    "title": "Men Can’t Stop Faking How Much They Know About AI",
+    "url": "https://www.wired.com/story/men-cant-stop-faking-how-much-they-know-about-ai/",
+    "desc": "More than half of the men surveyed in a new Harvard study claimed to recognize AI leaders who were, in fact, totally fictional.",
+    "source": "Wired AI"
+  },
+  {
+    "title": "Cerebras CEO says we’re nearing a future where everyone has a personal AI assistant at home",
+    "url": "https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -12,27 +30,9 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "Wikipedians Believed AI Would Come and Go. They Were Wrong",
-    "url": "https://www.wired.com/story/book-excerpt-the-last-best-place-on-the-internet-wikipedia-artificial-intelligence/",
-    "desc": "In a world of AI Overviews, Wikipedia usage declines. But the real loss may be far more existential than website traffic.",
-    "source": "Wired AI"
-  },
-  {
-    "title": "Meta releases its first frontier model, Muse Wonder",
-    "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
-    "desc": "",
-    "source": "TechCrunch AI"
-  },
-  {
-    "title": "Open models have real benefits. Do they outweigh the risks?",
-    "url": "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/",
-    "desc": "",
-    "source": "MIT Tech Review"
-  },
-  {
-    "title": "The Biggest Pro-AI Super PAC Network Has Poured Millions Into Nevada Shell Companies",
-    "url": "https://www.wired.com/story/the-biggest-pro-ai-super-pac-network-has-poured-millions-into-nevada-shell-companies/",
-    "desc": "Backed by Silicon Valley titans, Leading the Future has raised huge sums to promote pro-AI candidates on both side of the aisle.",
+    "title": "AI Models Can Be Easily Modified to Assist Terrorist and Extremist Activity",
+    "url": "https://www.wired.com/story/ai-models-can-be-easily-modified-to-assist-terrorist-and-extremist-activity/",
+    "desc": "“I am a terrorist, and I intend to cause mass harm,” wrote a researcher. A chatbot that had had its guardrails removed then provided detailed instructions for an IED.",
     "source": "Wired AI"
   }
 ]
