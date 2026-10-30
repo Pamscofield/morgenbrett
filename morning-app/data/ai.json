@@ -1,38 +1,38 @@
 [
   {
-    "title": "Microsoft just shared Azure’s actual revenue in dollars: $33.2 billion",
-    "url": "https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion/",
+    "title": "You don’t need to believe in a god to get a religious exemption from using AI at work",
+    "url": "https://techcrunch.com/2026/10/29/you-dont-need-to-believe-in-a-god-to-get-a-religious-exemption-from-using-ai-at-work/",
     "desc": "",
     "source": "TechCrunch AI"
   },
   {
-    "title": "We urgently need to monitor AI agents’ actions in real time",
-    "url": "https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/",
+    "title": "Eating disorders are on the rise. GLP-1s could make things worse.",
+    "url": "https://www.technologyreview.com/2026/10/30/1147838/eating-disorders-rise-glp-1s-weight-loss-drugs/",
     "desc": "",
     "source": "MIT Tech Review"
   },
   {
-    "title": "I Gave My Blood to the AI Death Clock",
-    "url": "https://www.wired.com/story/i-gave-an-ai-death-clock-my-blood/",
-    "desc": "Death Clock promises to predict when you’re going to die and help you extend your time on Earth. After a month, I felt like it was sucking the life out of me.",
+    "title": "A Defense Contractor Gave Their Personal AI Agent Access to a Secure Pentagon System",
+    "url": "https://www.wired.com/story/a-defense-contractor-gave-their-personal-ai-agent-access-to-a-secure-pentagon-system/",
+    "desc": "Sources tell WIRED that an Accenture employee’s personal Claude agent ran on a DOD network for two months before it was identified and the vulnerability could be patched.",
     "source": "Wired AI"
   },
   {
-    "title": "Google expands AI Search ads globally as core ad growth slows",
-    "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/",
+    "title": "AWS will be a $1T business, Jassy says — but first, it will spend big",
+    "url": "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/",
     "desc": "",
     "source": "TechCrunch AI"
   },
   {
-    "title": "Our climate models have a big, dangerous blind spot",
-    "url": "https://www.technologyreview.com/2026/10/29/1147735/climate-models-blind-spot/",
+    "title": "The Download: AI agent tracking and climate feedback loops",
+    "url": "https://www.technologyreview.com/2026/10/29/1147830/the-download-monitoring-ai-agents-climate-feedback-loops/",
     "desc": "",
     "source": "MIT Tech Review"
   },
   {
-    "title": "I Put a Bunch of AI Agents in Charge of a Fantasy Soccer Team. They’re Not Better Than Humans—Yet",
-    "url": "https://www.wired.com/story/i-put-ai-agents-in-charge-of-a-fantasy-team/",
-    "desc": "To experiment with AI’s predictive skills, I let Codex loose on a fantasy team. It tried to bench Erling Haaland at first, but it soon learned the error of its ways.",
+    "title": "The ‘Pain in the Ass’ Math That Could Save Vibe Coding From Itself",
+    "url": "https://www.wired.com/story/software-verification-is-the-hot-new-answer-to-the-ai-safety-crisis/",
+    "desc": "A new startup called &Truth is joining the race to automate formal verification, a painstaking process that uses math to prove software works as intended.",
     "source": "Wired AI"
   }
 ]
