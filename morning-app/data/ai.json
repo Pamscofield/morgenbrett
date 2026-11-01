@@ -1,7 +1,7 @@
 [
   {
-    "title": "Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia",
-    "url": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/",
+    "title": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’",
+    "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -12,14 +12,14 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "Meta’s Muse Could Upend All Kinds of Businesses. It Hasn’t Yet",
-    "url": "https://www.wired.com/story/metas-muse-could-upend-all-kinds-of-businesses-it-hasnt-yet/",
-    "desc": "Companies have spent the past several weeks trying to reassure investors that Muse and other AI agents pose more of an opportunity than a threat.",
+    "title": "Chatbots Are Leading Hikers Astray, With Dangerous Consequences",
+    "url": "https://www.wired.com/story/chatbots-are-leading-hikers-astray-with-dangerous-consequences/",
+    "desc": "Outsourcing planning to AI can lead people to surrender their own critical thinking, which can have potentially deadly results in places like the backcountry.",
     "source": "Wired AI"
   },
   {
-    "title": "Ollie, a privacy-focused AI assistant, is shutting down",
-    "url": "https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/",
+    "title": "4 days left: How TechCrunch Founder Summit helps you make more useful connections to scale",
+    "url": "https://techcrunch.com/2026/10/31/4-days-left-how-techcrunch-founder-summit-helps-you-make-more-useful-connections-to-scale/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -30,9 +30,9 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "An AI Agent Injected Drugs Into a Live Mouse’s Brain",
-    "url": "https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse/",
-    "desc": "A biotech startup let an agent choose a gene therapy and successfully inject the treatment, offering a startling glimpse of the future of research labs.",
+    "title": "Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims",
+    "url": "https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware/",
+    "desc": "Named “Volta-Autodoxer,” the recently uncovered malware uses AI tools to collect troves of data about victims, from login credentials and credit card numbers to Discord sessions and UberEats receipts.",
     "source": "Wired AI"
   }
 ]
