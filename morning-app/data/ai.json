@@ -1,13 +1,31 @@
 [
   {
-    "title": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
-    "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+    "title": "Apple Watch’s AI features for rewinding and recapping conversations begin beta testing",
+    "url": "https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing/",
     "desc": "",
     "source": "TechCrunch AI"
   },
   {
-    "title": "Stop counting tokens, start counting what ships",
-    "url": "https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/",
+    "title": "How “reverse game theory” could keep AI agents in check",
+    "url": "https://www.technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment/",
+    "desc": "",
+    "source": "MIT Tech Review"
+  },
+  {
+    "title": "‘Our Risk, Their Reward’: Zohran Mamdani on AI and Data Centers",
+    "url": "https://www.wired.com/story/the-big-interview-podcast-nyc-mayor-zohran-mamdani/",
+    "desc": "Ahead of the midterms, WIRED talked to New York City’s mayor about data centers, AI in schools, and the future of the Democratic party.",
+    "source": "Wired AI"
+  },
+  {
+    "title": "Google takes Dreambeans to India in bid to bring AI-generated personal stories to the masses",
+    "url": "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/",
+    "desc": "",
+    "source": "TechCrunch AI"
+  },
+  {
+    "title": "Here’s who is falling in line for Trump’s “Super Intelligence” loyalty test",
+    "url": "https://www.technologyreview.com/2026/11/02/1147932/heres-who-is-falling-in-line-for-trumps-super-intelligence-loyalty-test/",
     "desc": "",
     "source": "MIT Tech Review"
   },
@@ -15,24 +33,6 @@
     "title": "When You Should—and Shouldn’t—Use AI to Search the Web",
     "url": "https://www.wired.com/story/when-you-should-and-shouldnt-use-ai-to-search-the-web/",
     "desc": "Chatbots are often quite good at retrieving the information you want from the web. But sometimes you’ll get better results by typing your query into a good old search engine.",
-    "source": "Wired AI"
-  },
-  {
-    "title": "AI can make tech CEOs’ lives easier. What about everyone else?",
-    "url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/",
-    "desc": "",
-    "source": "TechCrunch AI"
-  },
-  {
-    "title": "The Download: the agentic web arrives and the drive for safer roads",
-    "url": "https://www.technologyreview.com/2026/11/02/1147889/the-download-agentic-web-arrives-eliminating-traffic-deaths/",
-    "desc": "",
-    "source": "MIT Tech Review"
-  },
-  {
-    "title": "Hundreds of Mundane AI Apps Are Hiding Sexually Abusive Deepfake Features",
-    "url": "https://www.wired.com/story/hundreds-of-mundane-ai-apps-are-hiding-abusive-deepfake-features/",
-    "desc": "WIRED uncovered some 400 apps and websites linked to Chinese-language developers that look like regular AI tools but had secret features that let users create violent AI-generated images and video.",
     "source": "Wired AI"
   }
 ]
