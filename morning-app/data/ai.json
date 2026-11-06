@@ -1,7 +1,25 @@
 [
   {
-    "title": "A YC startup is putting $1M behind five unsolved materials science problems for AI",
-    "url": "https://techcrunch.com/2026/11/05/a-yc-startup-is-putting-1m-behind-five-unsolved-materials-science-problems-for-ai/",
+    "title": "Underdog shows off a 32MB speech model in new demo",
+    "url": "https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/",
+    "desc": "",
+    "source": "TechCrunch AI"
+  },
+  {
+    "title": "I watched a humanoid robot clean my apartment. It felt like a taste of the future.",
+    "url": "https://www.technologyreview.com/2026/11/06/1148090/i-watched-a-humanoid-robot-clean-my-apartment-it-felt-like-a-taste-of-the-future/",
+    "desc": "",
+    "source": "MIT Tech Review"
+  },
+  {
+    "title": "Ads in Chatbots Have Arrived. Here’s What’s Working—and What’s Not",
+    "url": "https://www.wired.com/story/ads-in-chatbots-have-arrived-heres-whats-working-and-whats-not/",
+    "desc": "As Anthropic maintains its vow to keep ads out of Claude, the rest of the AI chatbot industry is racing to win over advertisers without antagonizing users.",
+    "source": "Wired AI"
+  },
+  {
+    "title": "Physicl raises $10M to make the digital world real enough for robots",
+    "url": "https://techcrunch.com/2026/11/06/physicl-raises-10m-to-make-the-digital-world-real-enough-for-robots/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -12,27 +30,9 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "Finding New Drugs Is Laborious. This AI Startup Is Skipping The Lab Work",
-    "url": "https://www.wired.com/story/finding-new-drugs-is-laborious-this-ai-startup-is-skipping-the-lab-work/",
-    "desc": "Potential Sciences, a startup backed by the UK government, is betting that training AI models on computer-generated biochemical data can speed up the plodding process of developing new drugs.",
-    "source": "Wired AI"
-  },
-  {
-    "title": "Agility is the first pure humanoid robot company on the stock market. Are you buying?",
-    "url": "https://techcrunch.com/2026/11/05/agility-is-the-first-pure-humanoid-robot-company-on-the-stock-market-are-you-buying/",
-    "desc": "",
-    "source": "TechCrunch AI"
-  },
-  {
-    "title": "A new bill could change how the US builds energy infrastructure",
-    "url": "https://www.technologyreview.com/2026/11/05/1148062/permitting-reform/",
-    "desc": "",
-    "source": "MIT Tech Review"
-  },
-  {
-    "title": "AI’s Next Trick? Speaking Dolphin",
-    "url": "https://www.wired.com/story/wired-world-fair-2026-denise-herzing-wild-dolphin/",
-    "desc": "Denise Herzing, the founder and director of the Wild Dolphin Project, is using AI to help understand audio and video footage of the marine mammals.",
+    "title": "Reddit Founder Says Building Social Media Apps Is ‘Not Cool Anymore’",
+    "url": "https://www.wired.com/story/wired-world-fair-2026-alexis-ohanian/",
+    "desc": "Alexis Ohanian is trying to figure out what’s next for user-generated content now that so much of the internet is “compromised.”",
     "source": "Wired AI"
   }
 ]
