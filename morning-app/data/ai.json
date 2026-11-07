@@ -1,7 +1,25 @@
 [
   {
-    "title": "Underdog shows off a 32MB speech model in new demo",
-    "url": "https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/",
+    "title": "Crusoe sells troubled Wyoming data center project to Google",
+    "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
+    "desc": "",
+    "source": "TechCrunch AI"
+  },
+  {
+    "title": "The Download: a humanoid cleans house and Samsung builds for the AI boom",
+    "url": "https://www.technologyreview.com/2026/11/06/1148154/the-download-humanoid-robot-cleaner-samsung-ai-chip-boom/",
+    "desc": "",
+    "source": "MIT Tech Review"
+  },
+  {
+    "title": "Apps for Caregivers Get a Dose of AI, but That Might Not Be Enough",
+    "url": "https://www.wired.com/story/apps-for-caregivers-get-a-dose-of-ai-but-that-might-not-be-enough/",
+    "desc": "The apps and platforms that help family caregivers manage their loved ones’ needs are becoming more capable, but the broader issue of caregivers’ well-being remains unsolved.",
+    "source": "Wired AI"
+  },
+  {
+    "title": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+    "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -12,27 +30,9 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "Ads in Chatbots Have Arrived. Here’s What’s Working—and What’s Not",
-    "url": "https://www.wired.com/story/ads-in-chatbots-have-arrived-heres-whats-working-and-whats-not/",
-    "desc": "As Anthropic maintains its vow to keep ads out of Claude, the rest of the AI chatbot industry is racing to win over advertisers without antagonizing users.",
-    "source": "Wired AI"
-  },
-  {
-    "title": "Physicl raises $10M to make the digital world real enough for robots",
-    "url": "https://techcrunch.com/2026/11/06/physicl-raises-10m-to-make-the-digital-world-real-enough-for-robots/",
-    "desc": "",
-    "source": "TechCrunch AI"
-  },
-  {
-    "title": "The Download: Texas’s fragile AI boom and energy policy shifts",
-    "url": "https://www.technologyreview.com/2026/11/05/1144908/the-download-texas-fragile-ai-boom-us-energy-policy/",
-    "desc": "",
-    "source": "MIT Tech Review"
-  },
-  {
-    "title": "Reddit Founder Says Building Social Media Apps Is ‘Not Cool Anymore’",
-    "url": "https://www.wired.com/story/wired-world-fair-2026-alexis-ohanian/",
-    "desc": "Alexis Ohanian is trying to figure out what’s next for user-generated content now that so much of the internet is “compromised.”",
+    "title": "Free Chinese AI Models Are Getting Scary Good at Hacking",
+    "url": "https://www.wired.com/story/free-chinese-ai-models-are-getting-scary-good-at-hacking/",
+    "desc": "An experiment in which AI models were asked to break into simulated networks showed the hacking skills of DeepSeek and GLM to be not far behind OpenAI’s most advanced cyber model, which isn’t public.",
     "source": "Wired AI"
   }
 ]
