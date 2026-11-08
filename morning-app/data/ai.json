@@ -1,7 +1,7 @@
 [
   {
-    "title": "Crusoe sells troubled Wyoming data center project to Google",
-    "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
+    "title": "After the midterms, things are looking rocky for Elon Musk and data centers",
+    "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -12,14 +12,14 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "Apps for Caregivers Get a Dose of AI, but That Might Not Be Enough",
-    "url": "https://www.wired.com/story/apps-for-caregivers-get-a-dose-of-ai-but-that-might-not-be-enough/",
-    "desc": "The apps and platforms that help family caregivers manage their loved ones’ needs are becoming more capable, but the broader issue of caregivers’ well-being remains unsolved.",
+    "title": "I Used NYT Cooking’s New AI-Powered Recipe Modifier, and It’s Actually Pretty Good",
+    "url": "https://www.wired.com/story/nyt-cooking-new-ai-powered-recipe-modifier-is-pretty-good/",
+    "desc": "The New York Times has added a beta feature to its Cooking app that helps readers swap ingredients or adjust recipes to suit their needs. It mostly hits the mark.",
     "source": "Wired AI"
   },
   {
-    "title": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
-    "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+    "title": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
+    "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -30,9 +30,9 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "Free Chinese AI Models Are Getting Scary Good at Hacking",
-    "url": "https://www.wired.com/story/free-chinese-ai-models-are-getting-scary-good-at-hacking/",
-    "desc": "An experiment in which AI models were asked to break into simulated networks showed the hacking skills of DeepSeek and GLM to be not far behind OpenAI’s most advanced cyber model, which isn’t public.",
+    "title": "World Models Will Soon Be Inescapable. Here’s What You Need to Know",
+    "url": "https://www.wired.com/story/world-models-will-soon-be-inescapable-what-you-need-to-know/",
+    "desc": "Moving AI from text to 3D space, world models simulate real-world physics to teach robots and autonomous cars how to navigate reality.",
     "source": "Wired AI"
   }
 ]
