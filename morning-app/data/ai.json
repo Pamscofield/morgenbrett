@@ -1,7 +1,25 @@
 [
   {
-    "title": "Superhuman pushes its Go assistant everywhere",
-    "url": "https://techcrunch.com/2026/11/19/superhuman-pushes-its-go-assistant-everywhere/",
+    "title": "Six AI-powered gadgets that could make your home office smarter",
+    "url": "https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/",
+    "desc": "",
+    "source": "TechCrunch AI"
+  },
+  {
+    "title": "The Download: inside the quest to make our minds immortal",
+    "url": "https://www.technologyreview.com/2026/11/20/1149371/the-download-quest-to-make-minds-immortal/",
+    "desc": "",
+    "source": "MIT Tech Review"
+  },
+  {
+    "title": "Muse Is Unleashing a World of Pettiness on Instagram",
+    "url": "https://www.wired.com/story/muse-is-unleashing-a-world-of-pettiness-on-instagram/",
+    "desc": "Meta’s AI assistant can track and unfollow Instagram users who don’t follow you back—and some people are taking full advantage.",
+    "source": "Wired AI"
+  },
+  {
+    "title": "Apple may be developing its own AI agent that runs your Mac",
+    "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -12,27 +30,9 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "Anthropic’s Record-Breaking IPO Highlights the AI Giant’s Worst Enemy—Itself",
-    "url": "https://www.wired.com/story/anthropics-record-breaking-ipo-highlights-the-ai-giants-worst-enemy-itself/",
-    "desc": "Investors betting a barnstorming $107 billion will weigh whether the company’s AI safety strategy and growing public anger towards data centers could impact its growth.",
-    "source": "Wired AI"
-  },
-  {
-    "title": "Microsoft CEO Satya Nadella explains why he asked 60K employees to quit",
-    "url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
-    "desc": "",
-    "source": "TechCrunch AI"
-  },
-  {
-    "title": "A human liver has been kept alive outside the body for a record seven weeks",
-    "url": "https://www.technologyreview.com/2026/11/19/1148934/a-human-liver-has-been-kept-alive-outside-the-body-for-seven-weeks-setting-a-record/",
-    "desc": "",
-    "source": "MIT Tech Review"
-  },
-  {
-    "title": "Does Nvidia Got This? Interim CEO Colette Kress Says It’s Got This",
-    "url": "https://www.wired.com/story/guys-really-we-got-this/",
-    "desc": "WIRED is tallying up how many times Nvidia’s interim CEO has assured everyone that the company has everything under control.",
+    "title": "Regular Tech Bros Are Worried About Honeypots",
+    "url": "https://www.wired.com/story/regular-tech-bros-are-worried-about-honeypots/",
+    "desc": "The Jensen Huang scandal is the latest fuel for dating anxieties among newly rich and powerful tech workers.",
     "source": "Wired AI"
   }
 ]
