@@ -1,7 +1,25 @@
 [
   {
-    "title": "Six AI-powered gadgets that could make your home office smarter",
-    "url": "https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/",
+    "title": "Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.",
+    "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
+    "desc": "",
+    "source": "TechCrunch AI"
+  },
+  {
+    "title": "The most misunderstood graph in AI just got a major update",
+    "url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+    "desc": "",
+    "source": "MIT Tech Review"
+  },
+  {
+    "title": "The Outages Are Just Getting Started",
+    "url": "https://www.wired.com/story/brace-yourself-for-years-of-outage-chaos/",
+    "desc": "AI is forcing companies to patch their systems faster as attackers race to exploit newly discovered vulnerabilities. Welcome to internet outage hell.",
+    "source": "Wired AI"
+  },
+  {
+    "title": "AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too",
+    "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
     "desc": "",
     "source": "TechCrunch AI"
   },
@@ -12,27 +30,9 @@
     "source": "MIT Tech Review"
   },
   {
-    "title": "Muse Is Unleashing a World of Pettiness on Instagram",
-    "url": "https://www.wired.com/story/muse-is-unleashing-a-world-of-pettiness-on-instagram/",
-    "desc": "Meta’s AI assistant can track and unfollow Instagram users who don’t follow you back—and some people are taking full advantage.",
-    "source": "Wired AI"
-  },
-  {
-    "title": "Apple may be developing its own AI agent that runs your Mac",
-    "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
-    "desc": "",
-    "source": "TechCrunch AI"
-  },
-  {
-    "title": "The Download: a living liver, a billion-dollar battery deal, and AI hype",
-    "url": "https://www.technologyreview.com/2026/11/19/1148979/the-download-liver-kept-alive-sila-battery-deal-ai-hype/",
-    "desc": "",
-    "source": "MIT Tech Review"
-  },
-  {
-    "title": "Regular Tech Bros Are Worried About Honeypots",
-    "url": "https://www.wired.com/story/regular-tech-bros-are-worried-about-honeypots/",
-    "desc": "The Jensen Huang scandal is the latest fuel for dating anxieties among newly rich and powerful tech workers.",
+    "title": "Cops Are Pushing Extremely Corny ‘Grand Theft Auto 6’ Slop",
+    "url": "https://www.wired.com/story/cops-are-being-extremely-corny-about-gta-vi/",
+    "desc": "The blockbuster game makes no secret of its contempt for law enforcement. Real police departments using it to recruit new members and scold the public apparently didn’t get the memo.",
     "source": "Wired AI"
   }
 ]
