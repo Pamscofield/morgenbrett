@@ -1,13 +1,31 @@
 [
   {
-    "title": "S&P considers Nvidia credit downgrade over governance and ‘key man’ risks",
-    "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/",
+    "title": "Nvidia hits pause on chip shipments to Southeast Asia",
+    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
     "desc": "",
     "source": "TechCrunch AI"
   },
   {
-    "title": "The Download: Better bionic hands and AI’s natural-gas boom",
-    "url": "https://www.technologyreview.com/2026/11/26/1149934/the-download-better-bionic-hands-ai-natural-gas-boom/",
+    "title": "The Download: Innovators Under 35 nominations are open, and a bionic window into the mind",
+    "url": "https://www.technologyreview.com/2026/11/27/1149960/the-download-the-download-innovators-under-35-nominations-bionic-hand/",
+    "desc": "",
+    "source": "MIT Tech Review"
+  },
+  {
+    "title": "A New Breed of Chip Runs AI Models Using Waves of Light",
+    "url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+    "desc": "German company Q.ANT is trying to cut the amount of energy required to run AI models by using light to perform the toughest calculations.",
+    "source": "Wired AI"
+  },
+  {
+    "title": "Grand Theft Auto VI proves why efficiency isn’t a virtue",
+    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
+    "desc": "",
+    "source": "TechCrunch AI"
+  },
+  {
+    "title": "Our 2027 Innovators Under 35 competition is now open",
+    "url": "https://www.technologyreview.com/2026/11/27/1149857/2027-innovators-under-35-competition-nominate/",
     "desc": "",
     "source": "MIT Tech Review"
   },
@@ -15,24 +33,6 @@
     "title": "Meta Refused to Share Muse for Testing, UK Financial Watchdog Complains",
     "url": "https://www.wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains/",
     "desc": "The FCA warned against “another force of attack” from agents after the company declined a request to work on joint testing ahead of rolling out its personal agent in the UK on Tuesday.",
-    "source": "Wired AI"
-  },
-  {
-    "title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
-    "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
-    "desc": "",
-    "source": "TechCrunch AI"
-  },
-  {
-    "title": "The next generation of bionic hands is here—and they can feel",
-    "url": "https://www.technologyreview.com/2026/11/26/1149923/the-next-generation-of-bionic-hands-is-here-and-they-can-feel/",
-    "desc": "",
-    "source": "MIT Tech Review"
-  },
-  {
-    "title": "Airplane Turbulence Is Extremely Hard to Predict, but Maybe Not for Long",
-    "url": "https://www.wired.com/story/airplane-turbulence-is-extremely-hard-to-predict-and-avoid/",
-    "desc": "The “hardest remaining problem in classical physics” gets a boost from terabytes of crowdsourced data and new ways of using machine learning and AI.",
     "source": "Wired AI"
   }
 ]
